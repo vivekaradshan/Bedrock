@@ -1,0 +1,7 @@
+boto3
+awscli
+numpy
+langchain_community
+langchain_core
+langchain_aws
+faiss-cpu
