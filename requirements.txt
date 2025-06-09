@@ -5,3 +5,6 @@ langchain_community
 langchain_core
 langchain_aws
 faiss-cpu
+pinecone
+tqdm
+pandas

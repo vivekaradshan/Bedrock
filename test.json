@@ -4,3 +4,9 @@
  "accept": "application/json",
  "body": "{\"prompt\":\"<s>[INST] this is where you place your input text [/INST]\", \"max_tokens\":200, \"temperature\":0.5, \"top_p\":0.9, \"top_k\":50}"
 }
+
+PINECONE_API_KEY = "pcsk_4GPuuG_NM3t7osYpzUEn7Mn66oF8S1dubbTnjehBNtHoNLSzc1x2Gxdp1chkCx7brgMDiE"
+PINECONE_ENVIRONMENT = "us-east-1" # e.g., "gcp-starter" or "us-east-1"
+INDEX_NAME = "smart-saving-unstruct" # Name for your Pinecone index
+DIMENSION = 384 # This is the dimension of the 'all-MiniLM-L6-v2' model embeddings
+METRIC = "cosine" # Similarity metric: 'cosine', 'euclidean', or 'dotproduct'
