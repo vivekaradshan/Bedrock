@@ -1,0 +1,38 @@
+1. Navigate to the AWS Lambda console and select the 'JPMC_RAG_Application' function
+
+2. In the function configuration, scroll down to the 'Layers' section
+
+3. Click on 'Add a layer'
+
+4. Choose 'AWS layers' and search for 'AWSLambda-Python3*-NumPy'
+
+5. Select the appropriate NumPy layer that matches your function's Python runtime (python3.12)
+
+6. Add the selected layer to your function
+
+7. Scroll up to the 'Code' tab and open the 'rag_lambda_handler.py' file
+
+8. Ensure that the numpy import is at the top of the file and not within any function:
+   ```python
+   import numpy as np
+   ```
+
+9. Save the changes to the Lambda function code
+
+10. Test the function again to verify that the numpy import error has been resolved
+
+11. If the error persists, check the function's deployment package:
+    - Ensure that numpy is not included in the deployment package
+    - Remove any numpy directory or files if present in the package
+
+12. If you're using a custom deployment package:
+    - Create a new deployment package without including numpy
+    - Update the Lambda function with the new deployment package
+
+13. If the issue still occurs, consider increasing the Lambda function's memory:
+    - Go to the 'Configuration' tab
+    - Select 'General configuration'
+    - Increase the 'Memory (MB)' to a higher value (e.g., 256 MB or 512 MB)
+    - Save the changes
+
+14. Test the function again after making these changes

@@ -10,3 +10,106 @@ PINECONE_ENVIRONMENT = "us-east-1" # e.g., "gcp-starter" or "us-east-1"
 INDEX_NAME = "smart-saving-unstruct" # Name for your Pinecone index
 DIMENSION = 384 # This is the dimension of the 'all-MiniLM-L6-v2' model embeddings
 METRIC = "cosine" # Similarity metric: 'cosine', 'euclidean', or 'dotproduct'
+
+Sarah Johnson (P001) : Can you share a view on issuing a home loan for her?
+
+--- Customer Profile ---
+| Property                  | Value         |
+| ------------------------- | ------------- |
+| Country                   | USA           |
+| Occupation                | Software Eng. |
+| Years At Job              | 7             |
+| Marital Status            | Single        |
+| Investment Risk Tolerance | Medium        |
+| Living Situation          | Own Home      |
+| Monthly Income Total      | 12000.0       |
+| Name                      | Sarah Johnson |
+| Dependents                | 0             |
+| Id                        | P001          |
+| Employment Status         | Full-time     |
+| Credit Risk Tolerance     | Low           |
+| State                     | California    |
+| Age                       | 32            |
+| Labels                    | Customer      |
+
+--- Connected Entity: Application ---
+| Property             | Value                     |
+| -------------------- | ------------------------- |
+| Relationship         | UNKNOWN_RELATIONSHIP      |
+| Entity Type          | Application               |
+| Entity Name/Id       | Personal Loan (ID: APL01) |
+| Term Months          | 36                        |
+| Application Date     | 2025-05-20                |
+| Currency             | USD                       |
+| Requested Amount     | 25000.0                   |
+| Purpose Of Loan Card | Home Renovation           |
+
+--- Connected Entity: FinancialAccount ---
+| Property       | Value                |
+| -------------- | -------------------- |
+| Relationship   | UNKNOWN_RELATIONSHIP |
+| Entity Type    | FinancialAccount     |
+| Entity Name/Id | Checking (ID: ACC01) |
+| Balance        | 2500.0               |
+| Currency       | USD                  |
+
+--- Connected Entity: Debt ---
+| Property                     | Value                             |
+| ---------------------------- | --------------------------------- |
+| Relationship                 | UNKNOWN_RELATIONSHIP              |
+| Entity Type                  | Debt                              |
+| Entity Name/Id               | Home Loan (ID: DEB01)             |
+| Payment Status Last 3 Months | Current, Current, Current         |
+| Remaining Balance            | 300000.0                          |
+| Original Amount              | 450000.0                          |
+| Interest Rate                | 0.07                              |
+| Currency                     | USD                               |
+| Monthly Payment              | 2500.0                            |
+
+--- Connected Entity: CreditReport ---
+| Property                 | Value                |
+| ------------------------ | -------------------- |
+| Relationship             | UNKNOWN_RELATIONSHIP |
+| Entity Type              | CreditReport         |
+| Entity Name/Id           | N/A (ID: CR01)       |
+| Score                    | 810                  |
+| Oldest Credit Line Years | 10                   |
+| Last Updated Date        | 2025-05-15           |
+| Number Of Inquiries L6M  | 1                    |
+| Open Accounts            | 5                    |
+
+--- Connected Entity: Asset ---
+| Property       | Value                |
+| -------------- | -------------------- |
+| Relationship   | UNKNOWN_RELATIONSHIP |
+| Entity Type    | Asset                |
+| Entity Name/Id | Property (ID: AST01) |
+| Description    | Primary Residence    |
+| Currency       | USD                  |
+| Value          | 800000.0             |
+
+--- Connected Entity: InvestmentPortfolio ---
+| Property       | Value                   |
+| -------------- | ----------------------- |
+| Relationship   | UNKNOWN_RELATIONSHIP    |
+| Entity Type    | InvestmentPortfolio     |
+| Entity Name/Id | Diversified (ID: INV01) |
+| Total Value    | 50000.0                 |
+| Asset Mix      | 60/30/10                |
+| Currency       | USD                     |
+
+--- Connected Entity: UnstructuredData ---
+| Property       | Value                       |
+| -------------- | --------------------------- |
+| Relationship   | UNKNOWN_RELATIONSHIP        |
+| Entity Type    | UnstructuredData            |
+| Entity Name/Id | Interview Notes (ID: UN001) |
+| Capture Date   | 2025-05-20                  |
+| Source         | Banker                      |
+
+Sarah Johnson (P001) : Can you assess her risk profile for granting home loan application APL02?
+
+export NEO4J_URI=neo4j+s://3af8a684.databases.neo4j.io
+export NEO4J_USERNAME=neo4j
+export NEO4J_PASSWORD=Tat-pgntlgkxbtIyxdNf5W1P0qorkDBm3YwhRWzrY4k
+export NEO4J_DATABASE=neo4j
